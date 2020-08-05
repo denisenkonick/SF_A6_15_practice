@@ -9,10 +9,15 @@ function round() {
   //DONE - 05.08.2020 N.D.
 $(".target").toggleClass("target");
   let divSelector = randomDivId();
+  console.log("Hit %d - divSelector %s", hits, divSelector);
   $(divSelector).addClass("target");
   // TODO: помечать target текущим номером
 
   // FIXME: тут надо определять при первом клике firstHitTime
+  //DONE - 05.08.2020 N.D.
+  if (hits === 0) {
+    firstHitTime = getTimestamp();
+  }
 
   if (hits === maxHits) {
     endGame();

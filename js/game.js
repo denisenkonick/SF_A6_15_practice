@@ -6,7 +6,8 @@ let firstHitTime = 0;
 
 function round() {
   // FIXME: надо бы убрать "target" прежде чем искать новый
-
+  //DONE - 05.08.2020 N.D.
+$(".target").toggleClass("target");
   let divSelector = randomDivId();
   $(divSelector).addClass("target");
   // TODO: помечать target текущим номером

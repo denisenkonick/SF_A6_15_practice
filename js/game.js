@@ -26,6 +26,7 @@ $(".target").toggleClass("target");
 
 function endGame() {
   // FIXME: спрятать игровое поле сначала
+  $(".field-wrapper").toggleClass("endhidden");
 
   let totalPlayedMillis = getTimestamp() - firstHitTime;
   let totalPlayedSeconds = Number(totalPlayedMillis / 1000).toPrecision(3);

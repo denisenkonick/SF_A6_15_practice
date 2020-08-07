@@ -12,6 +12,10 @@
   text-align: center;
 }
 
+ .endhidden {
+    display: none;
+  }
+
 .miss {
   background-color: red;
 }

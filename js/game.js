@@ -7,7 +7,7 @@ let firstHitTime = 0;
 function round() {
   // FIXME: надо бы убрать "target" прежде чем искать новый
   //DONE - 05.08.2020 N.D.
-  
+  //new comment
   // FIXME: убирать текст со старых таргетов. Кажется есть .text?
   //done - 07.08.2020 N.D.
   let elemTarget = $(".target");

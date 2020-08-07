@@ -7,12 +7,18 @@ let firstHitTime = 0;
 function round() {
   // FIXME: надо бы убрать "target" прежде чем искать новый
   //DONE - 05.08.2020 N.D.
-$(".target").toggleClass("target");
+  
+  // FIXME: убирать текст со старых таргетов. Кажется есть .text?
+  //done - 07.08.2020 N.D.
+  let elemTarget = $(".target");
+  elemTarget.html("");
+  elemTarget.toggleClass("target");
   let divSelector = randomDivId();
   console.log("Hit %d - divSelector %s", hits, divSelector);
   $(divSelector).addClass("target");
   // TODO: помечать target текущим номером
-
+  //done - 07.08.2020 N.D.
+  $(".target").html(hits+1);
   // FIXME: тут надо определять при первом клике firstHitTime
   //DONE - 05.08.2020 N.D.
   if (hits === 0) {
@@ -26,6 +32,7 @@ $(".target").toggleClass("target");
 
 function endGame() {
   // FIXME: спрятать игровое поле сначала
+  //done - 07.08.2020 NND
   $(".field-wrapper").toggleClass("endhidden");
 
   let totalPlayedMillis = getTimestamp() - firstHitTime;
@@ -36,7 +43,6 @@ function endGame() {
 }
 
 function handleClick(event) {
-  // FIXME: убирать текст со старых таргетов. Кажется есть .text?
   if ($(event.target).hasClass("target")) {
     hits = hits + 1;
     round();
